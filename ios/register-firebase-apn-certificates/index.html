@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<meta name="generator" content="Hugo 0.61.0" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light only">
+<meta name="supported-color-schemes" content="light only">
+
+
+  
+  
+    <title>iOS 푸시 알림, 파이어베이스에 APN 인증서 등록하기 &ndash; 형우의 앱개발</title>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/core.min.d1c6256edadbab4ca0244736e152f370c375e696b46ca40278440647039dc38e0d77d776eaa0ecdcbec7cc4e552f490f.css" integrity="sha384-0cYlbtrbq0ygJEc24VLzcMN15pa0bKQCeEQGRwOdw44Nd9d26qDs3L7HzE5VL0kP">
+<body>
+      <div class="base-body max-width"><section id="header" class="header max-body-width">
+  <p>
+    <a class="site-name" href="/">
+      
+        형우의 앱개발
+      
+    </a>
+    
+  </p>
+</section><div id="content" class="flex-body max-body-width">
+  
+  
+
+  <section class="article-header" >
+      <h1>iOS 푸시 알림, 파이어베이스에 APN 인증서 등록하기</h1>
+      <p class="article-date">2019-12-23</p>
+  </section>
+
+  <article class="markdown-body" >
+    <p>iOS의 푸시 알림 등록은 안드로이드보다 훨씬 까다롭다. 매번 아래 동영상을 참고해서 인증서를 생성하고 업로드하고 다운로드하고 다시 업로드해 인증서 등록을 마쳤는데, 그냥 문서로 정리해 두는 편이 좋을 듯해 이번엔 정리를 했다.</p>
+<!-- raw HTML omitted -->
+<p>거의 혼자 볼 용도로 정리한 것이니, 정리가 덜 돼 있어도 양해 바란다.</p>
+<ol>
+<li>키체인 접근 &gt; 인증서 지원 &gt; 인증기관에서 인증서 요청 / 이메일 입력, 이름, 디스크에 저장됨으로.</li>
+<li>프로젝트 설정 &gt; Capabilities &gt; Push Notification &gt; On</li>
+<li><a href="https://developer.apple.com/account/resources/identifiers/">https://developer.apple.com/account/resources/identifiers/</a>(Certificates, Identifiers &amp; Profiles &gt; Identifiers)로 이동. 거기서 Push Notifications &gt; Configure &gt; Development SSL Certificate &gt; Create Certificate &gt; 아까 만든 <code>CertificateSigningRequest.certSigningRequest</code> 파일 업로드 후 생성된 파일 다운로드(<code>aps_development.cer</code>). / Production SSL Certificate에 같은 <code>CertificateSigningRequest.certSigningRequest</code> 파일을 업로드해도 된다.</li>
+<li>다운로드한 파일 실행하면 키체인 접근에 임포트됨. (분류는 그냥 로그인으로 선택.)</li>
+<li>키체인 접근에서 방금 임포트한 키체인을 내보내기 한다. <code>p12</code> 확장자가 선택돼 있으면 되고, 파일명은 <code>forFirebase</code>라고 한다(<code>aps.cer</code>이면 <code>forFirebaseProduction</code>이라고 짓자). 키체인 암호를 입력하라고 하는데 입력한다. 빈 값도 된다. 맥의 로그인 암호 입력하라고 하는데 입력해 준다. 그럼 익스포트 된다.</li>
+<li>파이어베이스로 이동해서 iOS 프로젝트 선택하고, 설정 &gt; 클라우드 메시징 &gt; APN 인증서 &gt; 개발 APN 인증서 &gt; 업로드. 아까 내보내기 한 <code>forFirebase.p12</code> 파일을 업로드한다. (제품 APN 인증서엔 <code>forFirebaseProduction.p12</code>를 업로드하면 된다.)</li>
+</ol>
+
+  </article>
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+        </div><section id="footer" class="footer max-body-width">
+  
+  
+    
+  
+  <p>형우의 앱개발</p>
+  <p>
+    <span>Powered by</span>
+    <a href="https://gohugo.io">Hugo</a>
+    <span>and the</span>
+    <a href="https://themes.gohugo.io/hugo-notepadium/">Notepadium</a>
+  </p>
+</section>
+
+
+
+
+</div>
+    </body>
+</html>
