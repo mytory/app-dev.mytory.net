@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<meta name="generator" content="Hugo 0.61.0" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light only">
+<meta name="supported-color-schemes" content="light only">
+
+
+  
+  
+    <title>안드로이드. 여러 런처에서, 앱이 백그라운드 상태일 때도 일관되게 알림 배지 표시하기 &ndash; 형우의 앱개발</title>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/core.min.5750e8ce21b56987b394a86260a59057031dc60206392763ce65447b181331f89bb8036715b480042c7cdcc5686d3222.css" integrity="sha384-V1DoziG1aYezlKhiYKWQVwMdxgIGOSdjzmVEexgTMfibuANnFbSABCx83MVobTIi">
+<body>
+      <div class="base-body max-width"><section id="header" class="header max-body-width">
+  <p>
+    <a class="site-name" href="/">
+      
+        형우의 앱개발
+      
+    </a>
+    
+  </p>
+</section><div id="content" class="flex-body max-body-width">
+  
+  
+
+  <section class="article-header" >
+      <h1>안드로이드. 여러 런처에서, 앱이 백그라운드 상태일 때도 일관되게 알림 배지 표시하기</h1>
+      <p class="article-date">2021-03-06</p>
+  </section>
+
+  <article class="markdown-body" >
+    <p>안드로이드 앱 아이콘에 알림 배지를 표시하는 것은 까다롭다.</p>
+<p>안드로이드 구버전에는 알림 배지 기능이 없었는데, 그래서 여러 런처에서 알아서 앱 아이콘 알림 배지 기능을 구현한 모양이다. 이런 것까지 파편화돼 있을 줄은 몰랐다.</p>
+<p>안드로이드 8(오레오, API 26)부터는 운영체제 단에서 알림 배지를 지원한다. 그러나 우리가 흔히 아는 숫자 배지가 아니다. 알림이 있다는 표시만 되는 배지다. 배지가 보이면 길게 눌러 알림 내용을 확인한다. (아래 이미지는 <a href="https://developer.android.com/training/notify-user/badges">안드로이드 문서</a>를 캡쳐한 것이다.)</p>
+<p><img src="/images/2021/android-notification-badge-doc.png" alt=""></p>
+<p>다행히 이 기본 배지는 알림을 표시하기 위해 따로 코딩이 필요 없다. 따라서 패스.</p>
+<h2 id="---">여러 런처에 대응하는 라이브러리</h2>
+<p>여러 런처에 대응하기 위해서는 라이브러리를 사용하는 게 제일 편하다. 나는 <a href="https://github.com/leolin310148/ShortcutBadger">ShortcutBadger</a> ver1.1.22를 사용했다. 자세한 사용법은 라이브러리의 문서를 참고하면 되겠다.</p>
+<h2 id="-------">앱이 백그라운드에 있을 때 푸시 알림 카운트 수정하기</h2>
+<p>가장 골치아팠던 게 앱이 백그라운드에 있을 때 푸시 알림 카운트를 수정하는 것이었다. 앱이 실행중일 때는 알림이 오면 <code>FirebaseMessagingService</code>의 <code>onMessageReceived</code> 메서드의 코드가 실행됐는데, 앱이 백그라운드에 있을 때는 그렇지 않았던 것이다.</p>
+<p><strong>비밀은 FCM json 호출에 있다.</strong> 호출시 <code>notification</code> 키값을 빼고 알림을 호출하면 <code>onMessageReceived</code> 메서드가 호출된다(!). 아래 예시처럼 말이다. 그냥 <code>data</code> 키값에 데이터만 넣어서 호출한다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+    <span style="color:#f92672">&#34;data&#34;</span>: {
+        <span style="color:#f92672">&#34;badge&#34;</span>: <span style="color:#e6db74">&#34;1&#34;</span>,
+        <span style="color:#f92672">&#34;data_srno&#34;</span>: <span style="color:#e6db74">&#34;14513&#34;</span>,
+        <span style="color:#f92672">&#34;data_type&#34;</span>: <span style="color:#e6db74">&#34;ALARM&#34;</span>,
+        <span style="color:#f92672">&#34;data_msg&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
+        <span style="color:#f92672">&#34;title&#34;</span>: <span style="color:#e6db74">&#34;System Alarm&#34;</span>,
+        <span style="color:#f92672">&#34;message&#34;</span>: <span style="color:#e6db74">&#34;zms1&#34;</span>
+    },
+    <span style="color:#f92672">&#34;registration_ids&#34;</span>: [
+        <span style="color:#e6db74">&#34;...:APA91bE2WmYoT-Fcgvumn7hk2MmLQiRuUrKPUNPOaPCe_EFts8zWWsqjzMKMHHH7inpGXXaY3R1Rq0kUC4O_jTvB6f3Au-77XjNSUdlg9JTjlsoevpABovBofWmLf9UZxOUoC0Hzhnh1&#34;</span>
+    ]
+}
+</code></pre></div><h2 id="----1">대체 설명은 문서 어디에?</h2>
+<p>우선 안드로이드 운영체제 자신이 지금 우리가 하는 일에는 관심이 없다는 점을 알자. 푸시 알림을 받으면 알림 배지에 표시되는 숫자를 갱신하기 위해 코드를 실행한다는 게 안드로이드 입장에서는 기본 개념이 아닌 것이다.</p>
+<p>다만 알림이 왔을 때 뭔가 코드를 실행하려면 어떻게 하지? 하는 것에 대한 답이 될 만한 문서의 내용이 있긴 한데, 안드로이드 문서가 아니라 파이어베이스 문서에서 찾을 수 있다.</p>
+<p><a href="https://firebase.google.com/docs/cloud-messaging/android/receive?hl=ko">다음 파이어베이스 공식 문서</a>를 해독해 보자. 표를 보면 된다.</p>
+<p><img src="/images/2021/firebase-message-doc.png" alt=""></p>
+<p>앱이 포그라운드(Foreground) 상태에 있을 때, 즉 실행중일 때는 <code>onMessageReceived</code> 메서드가 세 경우 모두 실행된다고 설명돼 있다.</p>
+<p>그리고 백그라운드 상태일 때 알림(<code>notification</code> 키)은 작업 표시줄로 가고 데이터(<code>data</code> 키)는 <code>onMessageReceived</code>로 간다는 식으로 설명이 돼 있는데&hellip; 내 경험으로는 아니다.</p>
+<p><code>notification</code> 키가 있는 경우, 작업 표시줄만 갱신되고 끝난다. <code>data</code>는 알림을 터치해야 처리된다. 따라서 코드도 실행되지 않고 앱 배지는 갱신되지 않는다. <strong>코드가 실행되려면 <code>notification</code> 키가 없어야 한다.</strong> 위에 내가 예시로 적어 둔 코드처럼 말이다.</p>
+
+  </article>
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+        </div><section id="footer" class="footer max-body-width">
+  
+  
+    
+  
+  <p>형우의 앱개발</p>
+  <p>
+    <span>Powered by</span>
+    <a href="https://gohugo.io">Hugo</a>
+    <span>and the</span>
+    <a href="https://themes.gohugo.io/hugo-notepadium/">Notepadium</a>
+  </p>
+</section>
+
+
+
+
+</div>
+    </body>
+</html>
