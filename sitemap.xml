@@ -3,31 +3,62 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/ios/</loc>
-    <lastmod>2020-09-20T15:50:50+09:00</lastmod>
+    <loc>/tags/android/</loc>
+    <lastmod>2021-03-06T23:05:50+09:00</lastmod>
   </url>
   
   <url>
-    <loc>/ios/how-to-use-sf-symbols-on-ios-12-and-below/</loc>
-    <lastmod>2020-09-20T15:50:50+09:00</lastmod>
+    <loc>/blog/</loc>
+    <lastmod>2021-03-06T23:05:50+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/notification/</loc>
+    <lastmod>2021-03-06T23:05:50+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2021-03-06T23:05:50+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/android-notification-badge/</loc>
+    <lastmod>2021-03-06T23:05:50+09:00</lastmod>
   </url>
   
   <url>
     <loc>/</loc>
+    <lastmod>2021-03-06T23:05:50+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/icon/</loc>
     <lastmod>2020-09-20T15:50:50+09:00</lastmod>
   </url>
   
   <url>
-    <loc>/ios/register-firebase-apn-certificates/</loc>
+    <loc>/tags/ios/</loc>
+    <lastmod>2020-09-20T15:50:50+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/how-to-use-sf-symbols-on-ios-12-and-below/</loc>
+    <lastmod>2020-09-20T15:50:50+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/firebase/</loc>
+    <lastmod>2019-12-23T22:11:33+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/ios-register-firebase-apn-certificates/</loc>
     <lastmod>2019-12-23T22:11:33+09:00</lastmod>
   </url>
   
   <url>
     <loc>/categories/</loc>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
   </url>
   
 </urlset>

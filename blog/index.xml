@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>형우의 앱개발</title>
-    <link>https://app-dev.mytory.net/</link>
-    <description>Recent content on 형우의 앱개발</description>
+    <title>Blogs on 형우의 앱개발</title>
+    <link>https://app-dev.mytory.net/blog/</link>
+    <description>Recent content in Blogs on 형우의 앱개발</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
     <lastBuildDate>Sat, 06 Mar 2021 23:05:50 +0900</lastBuildDate>
     
-	<atom:link href="https://app-dev.mytory.net/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://app-dev.mytory.net/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>

@@ -1,27 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>형우의 앱개발</title>
-    <link>https://app-dev.mytory.net/</link>
-    <description>Recent content on 형우의 앱개발</description>
+    <title>ios on 형우의 앱개발</title>
+    <link>https://app-dev.mytory.net/tags/ios/</link>
+    <description>Recent content in ios on 형우의 앱개발</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Sat, 06 Mar 2021 23:05:50 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 20 Sep 2020 15:50:50 +0900</lastBuildDate>
     
-	<atom:link href="https://app-dev.mytory.net/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://app-dev.mytory.net/tags/ios/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>안드로이드. 여러 런처에서, 앱이 백그라운드 상태일 때도 일관되게 알림 배지 표시하기</title>
-      <link>https://app-dev.mytory.net/blog/android-notification-badge/</link>
-      <pubDate>Sat, 06 Mar 2021 23:05:50 +0900</pubDate>
-      
-      <guid>https://app-dev.mytory.net/blog/android-notification-badge/</guid>
-      <description>안드로이드 앱 아이콘에 알림 배지를 표시하는 것은 까다롭다.
-안드로이드 구버전에는 알림 배지 기능이 없었는데, 그래서 여러 런처에서 알아서 앱 아이콘 알림 배지 기능을 구현한 모양이다. 이런 것까지 파편화돼 있을 줄은 몰랐다.
-안드로이드 8(오레오, API 26)부터는 운영체제 단에서 알림 배지를 지원한다. 그러나 우리가 흔히 아는 숫자 배지가 아니다. 알림이 있다는 표시만 되는 배지다. 배지가 보이면 길게 눌러 알림 내용을 확인한다. (아래 이미지는 안드로이드 문서를 캡쳐한 것이다.)
-다행히 이 기본 배지는 알림을 표시하기 위해 따로 코딩이 필요 없다.</description>
-    </item>
     
     <item>
       <title>SF Symbols 아이콘을 iOS12 이하에서도 사용하기</title>
