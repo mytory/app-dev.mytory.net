@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Archive
+title: 글 목록 
 ---
 
-# Archive
+# 글 목록
 
-Browse all posts by month and year.
+연도별 전체 글 목록입니다.
 
 {% assign postsByYearMonth = site.posts | group_by_exp: "post", "post.date | date: '%B %Y'" %}
 {% for yearMonth in postsByYearMonth %}
