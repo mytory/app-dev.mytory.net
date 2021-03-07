@@ -1,6 +1,6 @@
 # Setup
 title: Dark Poole
-url: https://getpoole.com
+url: https://app-dev.mytory.net
 paginate: 1
 baseurl: ""
 permalink: pretty
@@ -32,17 +32,17 @@ sass:
 
 # Specify the author for blog posts
 author:
-  name: Mark Otto
-  url: https://twitter.com/mdo
-  email: markdotto@gmail.com
+  name: Hyeong-woo An
+  url: https://twitter.com/mytory_a
+  email: mail@mytory.net
 
 # Custom vars
 version: 3.0.0
 
 # Navbar page list
 nav:
-  - title: Blog
-    url: /archive
+  - title: 웹개발
+    url: https://mytory.net
 
   - title: About
     url: /about
