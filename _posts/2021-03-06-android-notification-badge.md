@@ -12,7 +12,7 @@ tags:
 
 안드로이드 8(오레오, API 26)부터는 운영체제 단에서 알림 배지를 지원한다. 그러나 우리가 흔히 아는 숫자 배지가 아니다. 알림이 있다는 표시만 되는 배지다. 배지가 보이면 길게 눌러 알림 내용을 확인한다. (아래 이미지는 [안드로이드 문서](https://developer.android.com/training/notify-user/badges)를 캡쳐한 것이다.)
 
-![](/images/2021/android-notification-badge-doc.png)
+![](/assets/2021/android-notification-badge-doc.png)
 
 다행히 이 기본 배지는 알림을 표시하기 위해 따로 코딩이 필요 없다. 따라서 패스.
 
@@ -51,7 +51,7 @@ tags:
 
 [다음 파이어베이스 공식 문서](https://firebase.google.com/docs/cloud-messaging/android/receive?hl=ko)를 해독해 보자. 표를 보면 된다.
 
-![](/images/2021/firebase-message-doc.png)
+![](/assets/2021/firebase-message-doc.png)
 
 앱이 포그라운드(Foreground) 상태에 있을 때, 즉 실행중일 때는 `onMessageReceived` 메서드가 세 경우 모두 실행된다고 설명돼 있다.
 

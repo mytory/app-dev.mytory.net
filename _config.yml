@@ -1,5 +1,5 @@
 # Setup
-title: Dark Poole
+title: 형우의 앱개발
 url: https://app-dev.mytory.net
 paginate: 1
 baseurl: ""
@@ -41,8 +41,8 @@ version: 3.0.0
 
 # Navbar page list
 nav:
-  - title: 웹개발
-    url: https://mytory.net
+  - title: 글목록
+    url: /archive
 
-  - title: About
+  - title: 소개
     url: /about
