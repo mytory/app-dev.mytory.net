@@ -42,8 +42,5 @@ version: 3.0.0
 
 # Navbar page list
 nav:
-  - title: 글목록
-    url: /archive
-
   - title: 소개
     url: /about
