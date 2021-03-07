@@ -15,7 +15,9 @@ tags:
 
 iOS의 푸시 알림 등록은 안드로이드보다 훨씬 까다롭다. 매번 아래 동영상을 참고해서 인증서를 생성하고 업로드하고 다운로드하고 다시 업로드해 인증서 등록을 마쳤는데, 그냥 문서로 정리해 두는 편이 좋을 듯해 이번엔 정리를 했다.
 
-{{< youtube PQbEqhKDIZU >}}
+<div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/PQbEqhKDIZU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 거의 혼자 볼 용도로 정리한 것이니, 정리가 덜 돼 있어도 양해 바란다.
 
