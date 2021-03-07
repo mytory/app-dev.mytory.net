@@ -1,29 +1,18 @@
 ---
 layout: page
-title: About
+title: 소개
 ---
 
 <p class="message">
-  Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
+  앱 개발도 조금 하는 웹 개발자
 </p>
 
-In the novel, *The Strange Case of Dr. Jekyll and Mr. Hyde*, Mr. Poole is Dr. Jekyll's virtuous and loyal butler. Similarly, Poole is an upstanding and effective butler that helps you build Jekyll themes. It's made by [@mdo](https://twitter.com/mdo).
+안녕하세요. 초보 앱 개발자 안형우입니다. 아주 초보적인 iOS, 안드로이드 앱 개발을 합니다.
 
-There are currently two themes built on Poole:
+배울 수 있는 가장 좋은 방법은 여러 사람들에게 자신이 아는 방법을 설명하는 것이죠. 그래서 공부를 하려면 쓰고 알려 주는 편이 좋다고 생각합니다.
 
-- [Hyde](https://hyde.getpoole.com)
-- [Lanyon](https://lanyon.getpoole.com)
+[웹 개발을 하면서도 이런 점을 크게 배웠습니다.][1] 그래서 앱 개발을 하면서도 블로그를 만들어 글을 쓰며 배우려고 합니다.
 
-Learn more and contribute on [GitHub](https://github.com/poole).
+[1]: https://mytory.net
 
-## Setup
-
-Some fun facts about the setup of this project include:
-
-- Built for [Jekyll](https://jekyllrb.com)
-- Developed on GitHub and hosted for free on [GitHub Pages](https://pages.github.com)
-- Coded with [Atom](https://atom.io), an amazing open source code editor
-
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/poole/poole/issues/new) or [ask me on Twitter](https://twitter.com/mdo).
-
-Thanks for reading!
+트위터: [mytory_a](https://twitter.com/mytory_a)
