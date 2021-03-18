@@ -160,7 +160,9 @@ D-U-N-S Number에는 이메일로 온 숫자를 입력해 주는데 아마도 �
 
 ## 8. 정보를 조금만 더...
 
-이제 Just a bit more info라고 하면서 주소를 다시 받는다. 웹사이트 주소와 사업자등록번호(Tax ID/National ID)를 입력하라고 한다.
+이제 Just a bit more info라고 하면서 주소를 다시 받는다. 
+
+물론 추가로 받는 정보도 있다. 웹사이트 주소와 사업자등록번호(Tax ID/National ID)를 입력하라고 한다. 
 
 그리고 지금 계정이 소유주/설립자(Owner/Founder)의 계정인지 대리인의 계정인지 묻는 부분이 나온다.
 
