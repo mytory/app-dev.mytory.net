@@ -141,6 +141,10 @@ D-U-N-S Number에는 이메일로 온 숫자를 입력해 주는데 아마도 �
 > 
 > Please do not respond to this message. This is a system generated email.
 
+**여기까지가 Step 1이다.**
+
+-----
+
 ## 7. 3일 후에 메일이 왔다
 
 > **요청 완료 알림 # 0000000 (일련번호 # 0000000) - COMPANY CO.,LTD. 정보 갱신 요청**
@@ -170,6 +174,8 @@ Continue를 클릭하고 나면 한 차례 정보를 확인하라고 입력한 �
 > 등록 신청이 처리중입니다. (Your enrollment is being processed.)
 
 ![](/assets/2021/9-your-enrollment-is-being-processed.jpg)
+
+**여기까지가 Step 2다.**
 
 다시 기다리는 중...
 
