@@ -7,11 +7,24 @@ tags:
     - firebase
 ---
 
-아래 설명을 보는 것보다 이 링크를 참고하라: <https://firebase.google.com/docs/cloud-messaging/ios/certs?hl=ko>
+## 최신 방법
+
+아래엔 "과거의 방법"에 대한 설명이 있다. 그런데 그것보다 이 링크를 참고하는 편이 낫다: <https://firebase.google.com/docs/cloud-messaging/ios/certs?hl=ko>
+
+1. [애플 개발자 센터의 어카운트](https://developer.apple.com/account/)에서 [Certificates, Identifier & Profiles](https://developer.apple.com/account/resources/certificates/list)를 선택한다. 
+2. 좌측 사이드바 메뉴에서 Keys를 선택한다.
+3. 그리고 [Keys+ 버튼을 누른다.](https://developer.apple.com/account/resources/authkeys/add)  
+   ![](/assets/2021/apn-key.png)
+4. Key Name을 입력하고 Apple Push Notifications service (APNs)에 체크하고 Continue를 누른다.
+5. 나온 설명을 복사해서 저장하고, 키를 다운로드한다. 키는 다시 다운로드할 수 없기 때문에 잘 보관한다.
+
+이후 Firebase에서 APN 키 등록을 해 주면 된다.
 
 아래 설명은 작동은 하지만 복잡하고 매년 키를 갱신해야 하는 반면 위 문서는 간편하고, 매년 키를 갱신할 필요도 없다.
 
----
+## 과거의 방법
+
+**!!! 이 방법보다는 위의 방법을 사용하세요 !!!**
 
 iOS의 푸시 알림 등록은 안드로이드보다 훨씬 까다롭다. 매번 아래 동영상을 참고해서 인증서를 생성하고 업로드하고 다운로드하고 다시 업로드해 인증서 등록을 마쳤는데, 그냥 문서로 정리해 두는 편이 좋을 듯해 이번엔 정리를 했다.
 
