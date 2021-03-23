@@ -1,5 +1,5 @@
 ---
-title: "iOS 푸시 알림, 파이어베이스에 APN 인증서 등록하기"
+title: "iOS 푸시 알림, 파이어베이스에 APN 키, 인증서 등록하기"
 date: 2019-12-23T22:11:33+09:00
 tags: 
     - ios
@@ -9,7 +9,7 @@ tags:
 
 ## 최신 방법 - 인증 키
 
-아래엔 "과거의 방법"에 대한 설명이 있다. 그런데 그것보다 이 링크를 참고하는 편이 낫다: <https://firebase.google.com/docs/cloud-messaging/ios/certs?hl=ko>
+이 링크를 참고한 것인데, 애플 사이트가 영어로 돼 있고 스샷도 없어서 내 설명을 보는 편이 이해하기 쉬울 거다: <https://firebase.google.com/docs/cloud-messaging/ios/certs?hl=ko>
 
 1. [애플 개발자 센터의 어카운트](https://developer.apple.com/account/)에서 [Certificates, Identifier & Profiles](https://developer.apple.com/account/resources/certificates/list)를 선택한다. 
 2. 좌측 사이드바 메뉴에서 Keys를 선택한다.
@@ -24,7 +24,7 @@ tags:
 
 이 키는 여러 앱에서 사용할 수 있다.
 
-아래 설명은 작동은 하지만 복잡하고 매년 키를 갱신해야 하는 반면 위 문서는 간편하고, 매년 키를 갱신할 필요도 없다.
+아래는 과거의 방법에 대한 설명이다. 작동은 하지만 복잡하고 매년 키를 갱신해야 하는 반면 위 문서는 간편하고, 매년 키를 갱신할 필요도 없다.
 
 ## 과거의 방법 - 인증서
 
