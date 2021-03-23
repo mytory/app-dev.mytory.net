@@ -7,7 +7,7 @@ tags:
     - firebase
 ---
 
-## 최신 방법
+## 최신 방법 - 인증 키
 
 아래엔 "과거의 방법"에 대한 설명이 있다. 그런데 그것보다 이 링크를 참고하는 편이 낫다: <https://firebase.google.com/docs/cloud-messaging/ios/certs?hl=ko>
 
@@ -18,13 +18,15 @@ tags:
 4. Key Name을 입력하고 Apple Push Notifications service (APNs)에 체크하고 Continue를 누른다.
 5. 나온 설명을 복사해서 저장하고, 키를 다운로드한다. 키는 다시 다운로드할 수 없기 때문에 잘 보관한다.
 
-이후 Firebase에서 APN 키 등록을 해 주면 된다.
+이후 Firebase에서 APN 인증 키 등록을 해 주면 된다.
+
+![](/assets/2021/firebase-apn-key.png)
 
 이 키는 여러 앱에서 사용할 수 있다.
 
 아래 설명은 작동은 하지만 복잡하고 매년 키를 갱신해야 하는 반면 위 문서는 간편하고, 매년 키를 갱신할 필요도 없다.
 
-## 과거의 방법
+## 과거의 방법 - 인증서
 
 **!!! 이 방법보다는 위의 방법을 사용하세요 !!!**
 
