@@ -9,7 +9,7 @@ layout: default
     {% include ad-image.html %}
   </aside>
 
-  <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">{{ page.date | date_to_string }}</time>
+  <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">{{ page.date | date: "%Y-%m-%d" }}</time>
   {{ content }}
 </article>
 
@@ -21,7 +21,7 @@ layout: default
       <li>
         <a href="{{ site.baseurl }}{{ post.url }}">
           {{ post.title }}
-          <small><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time></small>
+          <small><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time></small>
         </a>
       </li>
     {% endfor %}
