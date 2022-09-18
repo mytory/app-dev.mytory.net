@@ -34,5 +34,5 @@ tags:
 <string>LaunchScreen.storyboard</string>
 ```
 
-이러니 해결됐다.
+즉, 확장자를 떼니까 해결됐다.
 
