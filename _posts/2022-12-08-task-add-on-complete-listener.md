@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[자바/안드로이드] Task onCompleteListener 사용법"
+title: "[안드로이드] Task onCompleteListener 사용법"
 tags: 
     - java
     - android
