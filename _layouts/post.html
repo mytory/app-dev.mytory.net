@@ -5,10 +5,6 @@ layout: default
 <article class="post">
   <h1 class="post-title">{{ page.title }}</h1>
 
-  <aside class="google-information">
-    {% include ad-image.html %}
-  </aside>
-
   <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">{{ page.date | date: "%Y-%m-%d" }}</time>
   {{ content }}
 </article>
